@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular desconto</title>
+</head>
+<body>
+    <h1>Calcular desconto</h1>
+    <button onclick="calcular()">Calcular</button>
+    <p>Clique no botão acima para iniciar</p>
+    <section id="result"></section>
+
+    <script>
+        function calcular(){
+            let num = Number(window.prompt("Digite o valor do produto"))
+            
+
+            var des = num/10
+            var pro = num-des
+            
+            let res = document.querySelector('section#result')
+            res.innerHTML = `<p>O valor do produto é: <strong> ${num} </strong></p><hr>`
+            res.innerHTML += `<p>O valor do desconto é: <strong> ${des}  </strong></p>`
+            res.innerHTML += `<p>O valor do produto com o desconto é: <strong> ${pro} </strong></p>`
+            
+        }     
+    </script>
+</body>
+</html>

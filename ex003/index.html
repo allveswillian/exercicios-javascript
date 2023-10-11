@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de temperatura</title>
+</head>
+<body>
+    <h1>Conversor de temperatura</h1>
+    <button onclick="conversor()">Converter</button>
+    <p>Clique no botão acima para iniciar</p>
+    <section id="result"></section>
+
+    <script>
+        function conversor(){
+            let num = Number(window.prompt("Digite uma temperatura em graus celsius"))
+
+            var fah = num*1.8+32
+            var kel = num+273.15
+            
+
+            let res = document.querySelector('section#result')
+            res.innerHTML += `<p>A temperatura a ser convertida sera <strong> ${num}°C</strong></p><hr>`
+            res.innerHTML += `<p>O seu valor em Quilometros é <strong> ${fah}°F</strong></p>`
+            res.innerHTML += `<p>O seu valor em hectômetro é <strong> ${kel}°K</strong></p>`
+            
+        }     
+    </script>
+</body>
+</html>

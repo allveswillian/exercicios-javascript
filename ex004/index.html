@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de moeda</title>
+</head>
+<body>
+    <h1>Conversor de moeda</h1>
+    <button onclick="conversor()">Converter</button>
+    <p>Clique no botão acima para iniciar</p>
+    <section id="result"></section>
+
+    <script>
+        function conversor(){
+            let num = Number(window.prompt("Digite um valor em reais"))
+
+            var dol = num/4.86
+            
+            let res = document.querySelector('section#result')
+            res.innerHTML += `<p>O valor a ser convertido <strong> ${num} R$</strong></p><hr>`
+            res.innerHTML += `<p>O valor em dolar é <strong> ${dol} USD</strong></p>`
+            
+        }     
+    </script>
+</body>
+</html>

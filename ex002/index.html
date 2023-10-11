@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medidas</title>
+</head>
+<body>
+    <h1>Conversor de medidas</h1>
+    <button onclick="conversor()">Converter</button>
+    <p>Clique no botão acima para iniciar</p>
+    <section id="result"></section>
+
+    <script>
+        function conversor(){
+            let num = Number(window.prompt("Digite uma distancia em metros"))
+
+            var km = num/1000
+            var hm = num/100
+            var dam = num*10
+            var dm = num/10
+            var cm = num*100
+            var mm = num*1000
+
+            let res = document.querySelector('section#result')
+            res.innerHTML += `<p>O numero a ser analisado sera o <strong> ${num}</strong></p><hr>`
+            res.innerHTML += `<p>O seu valor em Quilometros é <strong> ${km}</strong></p>`
+            res.innerHTML += `<p>O seu valor em hectômetro é <strong> ${hm}</strong></p>`
+            res.innerHTML += `<p>O seu valor em decâmetro é <strong> ${dam}</strong></p>`
+            res.innerHTML += `<p>O seu valor em decimetro é <strong> ${dm}</strong></p>`
+            res.innerHTML += `<p>O seu valor em centimetros é <strong> ${cm}</strong></p>`
+            res.innerHTML += `<p>O seu valor em milimetros é <strong> ${mm}</strong></p>`
+            
+            
+        }     
+    </script>
+</body>
+</html>
